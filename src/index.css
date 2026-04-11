@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    direction: rtl;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply m-0 bg-slate-50 font-sans text-slate-900 antialiased;
+  }
+}
+
+.skip-to-content {
+  @apply fixed start-4 top-4 z-[100] -translate-y-24 rounded-lg bg-emerald-700 px-4 py-2 text-sm font-semibold text-white shadow-lg opacity-0 transition-all focus:translate-y-0 focus:opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2;
+}
