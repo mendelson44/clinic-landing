@@ -1,5 +1,4 @@
 import { Check } from 'lucide-react'
-import WhatsAppButton from './WhatsAppButton'
 
 const primaryConditions = [
   'כאבי גב תחתון',
@@ -26,37 +25,47 @@ const WhoSection = () => {
           למי הטיפול מתאים?
         </h2>
 
-        <div className="mb-8 grid gap-3 sm:grid-cols-2 sm:gap-4">
+        <p className="mb-8 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+          אם ניסית לנוח, למתוח או פשוט לחכות - וזה עדיין חוזר, יכול להיות שהגיע הזמן לטיפול ממוקד.
+        </p>
+
+        <div className="mb-8 grid gap-4 sm:grid-cols-2">
           {primaryConditions.map((item, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-4 rounded-2xl border border-border/80 bg-background p-5 shadow-sm"
+              className="flex min-h-[88px] items-center justify-between gap-4 rounded-[24px] border border-slate-200/90 bg-slate-50/90 px-5 py-4 shadow-[0_10px_30px_-24px_rgba(15,23,42,0.28)] ring-1 ring-slate-100/80"
             >
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary shadow-sm shadow-primary/25" aria-hidden>
-                <Check className="h-4 w-4 text-primary-foreground" strokeWidth={2.5} aria-hidden />
+              <div
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-emerald-200/80 bg-white/80 text-emerald-700 shadow-sm"
+                aria-hidden
+              >
+                <Check className="h-4 w-4" strokeWidth={2.25} aria-hidden />
               </div>
-              <span className="text-base font-medium text-foreground">{item}</span>
+              <span className="flex-1 text-center text-base font-medium leading-snug text-foreground">
+                {item}
+              </span>
             </div>
           ))}
         </div>
 
         <p className="mb-5 text-sm font-semibold text-muted-foreground">בנוסף:</p>
-        <div className="mb-4 grid gap-3 sm:grid-cols-2 sm:gap-4">
+        <div className="mb-4 grid gap-4 sm:grid-cols-2">
           {additionalConditions.map((item, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-4 rounded-2xl border border-border/80 bg-background p-5 shadow-sm"
+              className="flex min-h-[88px] items-center justify-between gap-4 rounded-[24px] border border-slate-200/90 bg-slate-50/90 px-5 py-4 shadow-[0_10px_30px_-24px_rgba(15,23,42,0.28)] ring-1 ring-slate-100/80"
             >
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/12 ring-1 ring-primary/20" aria-hidden>
-                <Check className="h-4 w-4 text-primary" strokeWidth={2.5} aria-hidden />
+              <div
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-emerald-200/80 bg-white/80 text-emerald-700 shadow-sm"
+                aria-hidden
+              >
+                <Check className="h-4 w-4" strokeWidth={2.25} aria-hidden />
               </div>
-              <span className="text-base font-medium text-foreground">{item}</span>
+              <span className="flex-1 text-center text-base font-medium leading-snug text-foreground">
+                {item}
+              </span>
             </div>
           ))}
-        </div>
-
-        <div className="mt-16 flex justify-center">
-          <WhatsAppButton text="לקביעת טיפול – שלחו הודעה" className="rounded-2xl px-10" />
         </div>
       </div>
     </section>

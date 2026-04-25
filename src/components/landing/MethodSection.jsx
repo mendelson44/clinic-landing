@@ -1,16 +1,16 @@
 import { useRef, useState } from 'react'
-import { Activity, ChevronLeft, ChevronRight, Droplets, HeartPulse, Move } from 'lucide-react'
-import WhatsAppButton from './WhatsAppButton'
+import { Check, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const goals = [
-  { icon: Droplets, text: 'שחרור עומסים בשרירים' },
-  { icon: Activity, text: 'שיפור זרימת דם לאזור' },
-  { icon: Move, text: 'הגדלת טווחי תנועה' },
-  { icon: HeartPulse, text: 'הפחתת כאב בצורה ממוקדת' },
+  { text: 'שיפור זרימת דם לאזור' },
+  { text: 'שחרור עומסים בשרירים' },
+  { text: 'הגדלת טווחי תנועה' },
+  { text: 'הפחתת כאב בצורה ממוקדת' },
 ]
 
 const galleryImages = [
   { src: '/images/method/method-01.png', alt: 'טיפול ידני על הגב' },
+  { src: '/images/method/method-17.png', alt: 'טיפול אינפרא אדום בקליניקה' },
   { src: '/images/method/method-02.png', alt: 'טיפול בכוסות רוח' },
   { src: '/images/method/method-03.png', alt: 'טיפול בכוסות רוח - מכשיר' },
   { src: '/images/method/method-04.png', alt: 'כוסות רוח על הגב - תוצאה' },
@@ -26,6 +26,9 @@ const galleryImages = [
   { src: '/images/method/method-14.png', alt: 'כוסות רוח - זווית נוספת' },
   { src: '/images/method/method-15.png', alt: 'טיפול כוסות רוח - עומס בגב' },
   { src: '/images/method/method-16.png', alt: 'כוסות רוח - כתפיים וגב עליון' },
+  { src: '/images/method/method-18.png', alt: 'כוסות רוח עם גרייה חשמלית בגב' },
+  { src: '/images/method/method-19.png', alt: 'טיפול אינפרא אדום בשילוב כוסות רוח' },
+  { src: '/images/method/method-20.png', alt: 'טיפול כוסות רוח בחדר הקליניקה' },
 ]
 
 const MethodSection = () => {
@@ -54,11 +57,11 @@ const MethodSection = () => {
   return (
     <section id="services" className="scroll-mt-20 px-5 py-24 md:py-32" dir="rtl">
       <div className="mx-auto max-w-5xl">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700/90">
+        <p className="mb-3 text-base font-semibold uppercase tracking-[0.18em] text-emerald-700/90 sm:text-lg">
           שיטת הטיפול
         </p>
         <h2 className="mb-12 text-3xl font-bold leading-tight text-foreground sm:text-4xl md:text-5xl">
-          איך זה עובד?
+          איך זה עובד
         </h2>
 
         <div className="mb-14 space-y-8">
@@ -66,8 +69,8 @@ const MethodSection = () => {
             הטיפול מתחיל באבחון קצר ומדויק כדי להבין מה באמת גורם לכאב.
           </p>
           <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            לאחר מכן מתבצע טיפול ממוקד שמשלב בעיקר כוסות רוח, ולעיתים גם טכניקות נוספות בהתאם
-            לצורך.
+            לאחר מכן מתבצע טיפול ממוקד שמשלב כוסות רוח, טווינא, אינפרא אדום, הקזות דם וטכניקות
+            נוספות בהתאם למה שהגוף צריך באותו רגע.
           </p>
 
           <div className="rounded-2xl border border-emerald-200/60 bg-gradient-to-bl from-emerald-50/80 to-transparent p-6 sm:p-8">
@@ -77,17 +80,24 @@ const MethodSection = () => {
           </div>
 
           <div>
-            <p className="mb-5 text-base font-semibold text-foreground sm:text-lg">בפועל עובדים על:</p>
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <p className="mb-5 text-base font-semibold text-foreground sm:text-lg">
+              בפועל הטיפול מכוון ל :
+            </p>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {goals.map((goal, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-3 rounded-2xl border border-border/80 bg-card/80 p-4 shadow-sm"
+                  className="flex min-h-[88px] items-center justify-between gap-4 rounded-[24px] border border-slate-200/90 bg-slate-50/90 px-5 py-4 shadow-[0_10px_30px_-24px_rgba(15,23,42,0.28)] ring-1 ring-slate-100/80"
                 >
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/12" aria-hidden>
-                    <goal.icon className="h-5 w-5 text-primary" aria-hidden />
+                  <div
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-emerald-200/80 bg-white/80 text-emerald-700 shadow-sm"
+                    aria-hidden
+                  >
+                    <Check className="h-4 w-4" strokeWidth={2.25} aria-hidden />
                   </div>
-                  <span className="text-sm font-medium leading-snug text-foreground">{goal.text}</span>
+                  <span className="flex-1 text-center text-base font-medium leading-snug text-foreground">
+                    {goal.text}
+                  </span>
                 </div>
               ))}
             </div>
@@ -142,10 +152,6 @@ const MethodSection = () => {
               />
             </div>
           ))}
-        </div>
-
-        <div className="mt-16 flex justify-center">
-          <WhatsAppButton text="לקביעת טיפול – שלחו הודעה" className="rounded-2xl px-10" />
         </div>
       </div>
     </section>

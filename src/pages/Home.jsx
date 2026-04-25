@@ -1,4 +1,3 @@
-import AccessibilitySection from '../components/landing/AccessibilitySection'
 import ClosingSection from '../components/landing/ClosingSection'
 import HeroSection from '../components/landing/HeroSection'
 import MethodSection from '../components/landing/MethodSection'
@@ -27,7 +26,6 @@ const Home = () => {
       <ProcessSection image="/images/method/method-01.png" />
       <WhyMeSection />
       <ClosingSection />
-      <AccessibilitySection />
       <SiteFooter />
       <StickyWhatsAppButton />
     </main>

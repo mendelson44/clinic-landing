@@ -12,7 +12,7 @@ const ClosingSection = () => {
         className="mx-auto max-w-3xl rounded-3xl border border-slate-200/80 bg-gradient-to-b from-white to-slate-50/90 px-6 py-14 text-center shadow-lg shadow-slate-200/40 sm:px-10 md:py-16"
       >
         <h2 className="mb-6 font-sans text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
-          לא חייבים להישאר עם זה
+          תנועה חופשית ללא כאב היא איכות חיים
         </h2>
         <p className="mb-10 text-lg leading-relaxed text-slate-600 sm:text-xl">
           שלחו הודעה ונבדוק איך אפשר לעזור לך לחזור לתפקוד תקין

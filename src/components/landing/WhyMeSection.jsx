@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion'
-import { Check, MapPin } from 'lucide-react'
+import { Activity, BriefcaseMedical, MapPin, Search, Target } from 'lucide-react'
 
 const reasons = [
-  'אבחון מהיר ומדויק',
-  'טיפול ממוקד בכאב ובהגבלה בתנועה',
-  'ניסיון בטיפול בבעיות אורתופדיות',
-  'הבנה של עומסים מהחיים עצמם — ספורט, עבודה וישיבה',
+  { icon: Search, text: 'אבחון מהיר ומדויק' },
+  { icon: Target, text: 'טיפול ממוקד בכאב ובהגבלה בתנועה' },
+  { icon: BriefcaseMedical, text: 'ניסיון בטיפול בבעיות אורתופדיות' },
+  { icon: Activity, text: 'הבנה של עומסים מהחיים עצמם — ספורט, עבודה וישיבה' },
 ]
 
 const fadeInUp = {
@@ -23,15 +23,17 @@ const WhyMeSection = () => (
         </h2>
 
         <ul className="mb-10 space-y-3">
-          {reasons.map((line) => (
+          {reasons.map((reason) => (
             <li
-              key={line}
+              key={reason.text}
               className="flex gap-4 rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm"
             >
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-emerald-600 shadow-sm shadow-emerald-600/30">
-                <Check className="h-4 w-4 text-white" strokeWidth={2.5} aria-hidden />
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-emerald-600 shadow-sm shadow-emerald-600/30">
+                <reason.icon className="h-5 w-5 text-white" strokeWidth={2.25} aria-hidden />
               </span>
-              <span className="pt-0.5 text-base font-medium leading-relaxed text-slate-800">{line}</span>
+              <span className="pt-0.5 text-base font-medium leading-relaxed text-slate-800">
+                {reason.text}
+              </span>
             </li>
           ))}
         </ul>
@@ -43,9 +45,9 @@ const WhyMeSection = () => (
               <MapPin className="h-6 w-6" aria-hidden />
             </div>
             <div>
-              <p className="text-lg font-semibold text-slate-900">קליניקה פרטית בצור יצחק</p>
+              <p className="text-xl font-bold text-slate-900">קליניקה פרטית בצור יצחק</p>
               <p className="mt-2 text-base leading-relaxed text-slate-600">
-                נוחה להגעה גם מכוכב יאיר, צור יגאל וכפר סבא
+                בקרבת כפר סבא, כוכב יאיר והסביבה
               </p>
             </div>
           </div>

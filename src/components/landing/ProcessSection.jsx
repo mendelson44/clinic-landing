@@ -1,5 +1,4 @@
 import { Clock } from 'lucide-react'
-import WhatsAppButton from './WhatsAppButton'
 
 const ProcessSection = ({ image }) => {
   return (
@@ -47,10 +46,6 @@ const ProcessSection = ({ image }) => {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="mt-16 flex justify-center">
-          <WhatsAppButton text="לקביעת טיפול – שלחו הודעה" className="rounded-2xl px-10" />
         </div>
       </div>
     </section>

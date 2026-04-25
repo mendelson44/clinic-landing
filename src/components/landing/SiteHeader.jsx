@@ -23,8 +23,28 @@ const SiteHeader = () => {
           : 'border-transparent bg-white/75 backdrop-blur-sm'
       }`}
     >
-      <div className="mx-auto flex h-14 max-w-6xl flex-wrap items-center justify-center gap-x-4 gap-y-2 px-4 sm:h-16 sm:flex-nowrap sm:justify-between">
-        <p className="text-center font-sans text-sm font-semibold tracking-wide text-slate-800 sm:text-base">
+      <div className="mx-auto flex h-14 max-w-6xl flex-wrap items-center justify-center gap-x-4 gap-y-2 px-4 sm:relative sm:h-16 sm:flex-nowrap sm:justify-start">
+        <nav aria-label="ניווט ראשי" className="text-xs font-medium text-slate-600 sm:text-sm">
+          <ul className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 sm:gap-x-4">
+            <li>
+              <a
+                href="#services"
+                className="rounded-md underline-offset-4 hover:text-slate-900 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2"
+              >
+                שיטת הטיפול
+              </a>
+            </li>
+            <li>
+              <a
+                href="#why-me"
+                className="rounded-md underline-offset-4 hover:text-slate-900 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2"
+              >
+                למה אני
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <p className="text-center font-sans text-base font-semibold tracking-wide text-slate-800 sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:text-lg">
           <span className="bg-gradient-to-l from-emerald-700 to-emerald-600 bg-clip-text text-transparent">
             גיא נימני
           </span>
@@ -33,28 +53,6 @@ const SiteHeader = () => {
           </span>
           <span className="font-medium text-slate-600">שיקום הגוף</span>
         </p>
-        <nav aria-label="ניווט ראשי" className="text-xs font-medium text-slate-600 sm:text-sm">
-          <ul className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 sm:gap-x-4">
-            <li>
-              <a href="#services" className="rounded-md underline-offset-4 hover:text-slate-900 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2">
-                שיטת הטיפול
-              </a>
-            </li>
-            <li>
-              <a href="#why-me" className="rounded-md underline-offset-4 hover:text-slate-900 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2">
-                למה אני
-              </a>
-            </li>
-            <li>
-              <a
-                href="#accessibility"
-                className="rounded-md underline-offset-4 hover:text-slate-900 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2"
-              >
-                נגישות
-              </a>
-            </li>
-          </ul>
-        </nav>
       </div>
     </motion.header>
   )
