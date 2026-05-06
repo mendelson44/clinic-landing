@@ -9,9 +9,10 @@ const fadeUp = {
 }
 
 const painQuestions = [
-  'קמים עם כאבי גב בבוקר?',
-  'הצוואר תפוס לאורך היום?',
-  'כאב שמקרין לרגל ולא משתחרר?',
+  'קמים בבוקר עם גב תפוס?',
+  'יש כאב שמקרין לישבן או לרגל?',
+  'סובלים מכאב חוזר בצוואר ובשכמות?',
+  'הכתף כואבת או מוגבלת בתנועה?',
 ]
 
 const HeroSection = ({ heroImage }) => {
@@ -100,7 +101,7 @@ const HeroSection = ({ heroImage }) => {
                         className="flex items-start gap-3 text-right text-[1.02rem] font-medium leading-snug text-slate-800 sm:text-lg"
                       >
                         <span
-                          className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-rose-500 shadow-[0_0_0_4px_rgba(244,63,94,0.12)]"
+                          className="mt-3 h-[2px] w-5 shrink-0 rounded-full bg-gradient-to-l from-emerald-600 to-emerald-400/70"
                           aria-hidden
                         />
                         <span>{q}</span>

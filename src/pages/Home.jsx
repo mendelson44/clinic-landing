@@ -23,7 +23,7 @@ const Home = () => {
       <HeroSection heroImage="/images/hero/hero-main.png" />
       <MethodSection />
       <WhoSection />
-      <ProcessSection image="/images/method/method-01.png" />
+      <ProcessSection video="/videos/process-treatment.mp4" />
       <WhyMeSection />
       <ClosingSection />
       <SiteFooter />

@@ -1,8 +1,35 @@
+import { useEffect, useRef } from 'react'
 import { Clock } from 'lucide-react'
 
-const ProcessSection = ({ image }) => {
+const ProcessSection = ({ video }) => {
+  const sectionRef = useRef(null)
+  const videoRef = useRef(null)
+
+  useEffect(() => {
+    if (!video || !sectionRef.current || !videoRef.current) return
+
+    const media = videoRef.current
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          media.play().catch(() => {})
+          return
+        }
+
+        media.pause()
+      },
+      { threshold: 0.5 },
+    )
+
+    observer.observe(sectionRef.current)
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [video])
+
   return (
-    <section className="px-5 py-24 md:py-32" dir="rtl">
+    <section ref={sectionRef} className="px-5 py-24 md:py-32" dir="rtl">
       <div className="mx-auto max-w-5xl">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700/90">
           לפני שמגיעים
@@ -13,17 +40,21 @@ const ProcessSection = ({ image }) => {
 
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="order-2 overflow-hidden rounded-3xl shadow-xl ring-1 ring-slate-200/80 lg:order-1">
-            {image ? (
-              <img
-                src={image}
-                alt="שיחה קצרה ואבחון לפני טיפול"
-                className="aspect-[4/5] h-full w-full object-cover sm:aspect-auto sm:min-h-[320px] lg:min-h-[380px]"
-                loading="lazy"
-                decoding="async"
+            {video ? (
+              <video
+                ref={videoRef}
+                src={video}
+                className="aspect-square w-full object-cover"
+                controls
+                loop
+                muted
+                autoPlay
+                playsInline
+                preload="metadata"
               />
             ) : (
               <div className="flex aspect-[4/5] min-h-[280px] items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 text-slate-400 sm:aspect-auto">
-                <span className="text-sm">תמונת טיפול</span>
+                <span className="text-sm">וידאו טיפול</span>
               </div>
             )}
           </div>

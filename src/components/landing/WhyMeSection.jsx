@@ -1,11 +1,35 @@
 import { motion } from 'framer-motion'
 import { Activity, BriefcaseMedical, MapPin, Search, Target } from 'lucide-react'
 
+const tzurYitzhakCoords = {
+  lat: 32.24111,
+  lng: 34.9975,
+}
+
+const mapEmbedSrc = `https://www.openstreetmap.org/export/embed.html?bbox=34.9775%2C32.23111%2C35.0175%2C32.25111&layer=mapnik&marker=${tzurYitzhakCoords.lat}%2C${tzurYitzhakCoords.lng}`
+const mapLink = `https://www.google.com/maps/search/?api=1&query=${tzurYitzhakCoords.lat},${tzurYitzhakCoords.lng}`
+
 const reasons = [
-  { icon: Search, text: 'אבחון מהיר ומדויק' },
-  { icon: Target, text: 'טיפול ממוקד בכאב ובהגבלה בתנועה' },
-  { icon: BriefcaseMedical, text: 'ניסיון בטיפול בבעיות אורתופדיות' },
-  { icon: Activity, text: 'הבנה של עומסים מהחיים עצמם — ספורט, עבודה וישיבה' },
+  {
+    icon: Search,
+    title: 'אבחון קצר ומדויק',
+    text: 'להבין מה מקור הכאב ומה מגביל את התנועה',
+  },
+  {
+    icon: Target,
+    title: 'טיפול ממוקד בכאב ובתנועה',
+    text: 'כוסות רוח, הקזות דם וטכניקות נוספות לפי הצורך',
+  },
+  {
+    icon: BriefcaseMedical,
+    title: 'ניסיון בטיפול בכאבים אורתופדיים',
+    text: '1000+ מטופלים עברו דרכי\nגב, צוואר, כתפיים, שכמות והקרנות לרגל',
+  },
+  {
+    icon: Activity,
+    title: 'הבנה של עומסים מחיי היום־יום',
+    text: 'ספורט, עבודה ממושכת וישיבה מול מחשב',
+  },
 ]
 
 const fadeInUp = {
@@ -19,21 +43,22 @@ const WhyMeSection = () => (
     <div className="mx-auto w-full max-w-3xl">
       <motion.div {...fadeInUp} transition={{ duration: 0.5 }}>
         <h2 className="mb-12 text-center font-sans text-3xl font-bold leading-tight text-slate-900 sm:text-4xl md:text-5xl">
-          למה לבחור בי?
+          למה להגיע אליי לטיפול?
         </h2>
 
         <ul className="mb-10 space-y-3">
           {reasons.map((reason) => (
             <li
-              key={reason.text}
+              key={reason.title}
               className="flex gap-4 rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm"
             >
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-emerald-600 shadow-sm shadow-emerald-600/30">
                 <reason.icon className="h-5 w-5 text-white" strokeWidth={2.25} aria-hidden />
               </span>
-              <span className="pt-0.5 text-base font-medium leading-relaxed text-slate-800">
-                {reason.text}
-              </span>
+              <div className="space-y-1 pt-0.5">
+                <p className="text-base font-semibold leading-relaxed text-slate-900">{reason.title}</p>
+                <p className="whitespace-pre-line text-base leading-relaxed text-slate-600">{reason.text}</p>
+              </div>
             </li>
           ))}
         </ul>
@@ -49,6 +74,25 @@ const WhyMeSection = () => (
               <p className="mt-2 text-base leading-relaxed text-slate-600">
                 בקרבת כפר סבא, כוכב יאיר והסביבה
               </p>
+            </div>
+          </div>
+          <div className="relative mt-6 overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-sm">
+            <iframe
+              title="מפה לדוגמה של צור יצחק"
+              src={mapEmbedSrc}
+              className="h-[260px] w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+            <div className="flex items-center justify-end gap-3 border-t border-slate-200/80 bg-white/95 px-4 py-3 text-sm">
+              <a
+                href={mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-emerald-700 underline-offset-2 hover:text-emerald-800 hover:underline"
+              >
+                פתיחה במפה
+              </a>
             </div>
           </div>
         </div>

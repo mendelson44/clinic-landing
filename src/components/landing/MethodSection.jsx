@@ -9,26 +9,15 @@ const goals = [
 ]
 
 const galleryImages = [
-  { src: '/images/method/method-01.png', alt: 'טיפול ידני על הגב' },
-  { src: '/images/method/method-17.png', alt: 'טיפול אינפרא אדום בקליניקה' },
-  { src: '/images/method/method-02.png', alt: 'טיפול בכוסות רוח' },
-  { src: '/images/method/method-03.png', alt: 'טיפול בכוסות רוח - מכשיר' },
-  { src: '/images/method/method-04.png', alt: 'כוסות רוח על הגב - תוצאה' },
-  { src: '/images/method/method-05.png', alt: 'טיפול בכוסות רוח - כל הגב' },
-  { src: '/images/method/method-06.png', alt: 'כוסות רוח - שני שורות' },
-  { src: '/images/method/method-07.png', alt: 'טיפול כוסות רוח מרובות' },
-  { src: '/images/method/method-08.png', alt: 'טיפול כוסות רוח - גב שלם' },
-  { src: '/images/method/method-09.png', alt: 'כוסות רוח - זווית צד' },
-  { src: '/images/method/method-10.png', alt: 'טיפול כוסות רוח - מתיחה' },
-  { src: '/images/method/method-11.png', alt: 'תוצאת טיפול בגב' },
-  { src: '/images/method/method-12.png', alt: 'טיפול כוסות רוח - גב מלא' },
-  { src: '/images/method/method-13.png', alt: 'טיפול כוסות רוח - חדר קליניקה' },
-  { src: '/images/method/method-14.png', alt: 'כוסות רוח - זווית נוספת' },
-  { src: '/images/method/method-15.png', alt: 'טיפול כוסות רוח - עומס בגב' },
-  { src: '/images/method/method-16.png', alt: 'כוסות רוח - כתפיים וגב עליון' },
-  { src: '/images/method/method-18.png', alt: 'כוסות רוח עם גרייה חשמלית בגב' },
-  { src: '/images/method/method-19.png', alt: 'טיפול אינפרא אדום בשילוב כוסות רוח' },
-  { src: '/images/method/method-20.png', alt: 'טיפול כוסות רוח בחדר הקליניקה' },
+  { src: '/images/method/method-01.png', alt: 'כוסות רוח לאורך כל הגב' },
+  { src: '/images/method/method-02.png', alt: 'כוסות רוח בשכמות ובגב העליון' },
+  { src: '/images/method/method-03.png', alt: 'כוסות רוח לאורך הגב בזווית צד' },
+  { src: '/images/method/method-04.png', alt: 'טיפול כוסות רוח בשילוב אלקטרודות' },
+  { src: '/images/method/method-05.png', alt: 'תוצאה לאחר טיפול כוסות רוח בישיבה' },
+  { src: '/images/method/method-06.png', alt: 'כוסות רוח באזור הרגל' },
+  { src: '/images/method/method-07.png', alt: 'כוסות רוח לכל אורך הגב במיטה' },
+  { src: '/images/method/method-08.png', alt: 'כוסות רוח לצד הגב והמותן' },
+  { src: '/images/method/method-09.png', alt: 'כוסות רוח בקליניקה מזווית רחבה' },
 ]
 
 const MethodSection = () => {
@@ -66,11 +55,12 @@ const MethodSection = () => {
 
         <div className="mb-14 space-y-8">
           <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            הטיפול מתחיל באבחון קצר ומדויק כדי להבין מה באמת גורם לכאב.
+            הטיפול מתחיל באבחון קצר ומדויק — כדי להבין מה באמת גורם לכאב, איפה נמצא העומס ואיך הגוף
+            מגיב.
           </p>
           <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            לאחר מכן מתבצע טיפול ממוקד שמשלב כוסות רוח, טווינא, אינפרא אדום, הקזות דם וטכניקות
-            נוספות בהתאם למה שהגוף צריך באותו רגע.
+            לאחר מכן מתבצע טיפול ממוקד, שמשלב בעיקר כוסות רוח, ולעיתים גם הקזות דם וטכניקות
+            נוספות, בהתאם למצב הגוף ולתגובה בזמן הטיפול
           </p>
 
           <div className="rounded-2xl border border-emerald-200/60 bg-gradient-to-bl from-emerald-50/80 to-transparent p-6 sm:p-8">
