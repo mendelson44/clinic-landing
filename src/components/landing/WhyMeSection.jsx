@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion'
 import { Activity, BriefcaseMedical, MapPin, Search, Target } from 'lucide-react'
 
-const tzurYitzhakCoords = {
-  lat: 32.24111,
-  lng: 34.9975,
-}
+const clinicAddress = 'נחל ערוגות 12, צור יצחק'
+const encodedAddress = encodeURIComponent(clinicAddress)
 
-const mapEmbedSrc = `https://www.openstreetmap.org/export/embed.html?bbox=34.9775%2C32.23111%2C35.0175%2C32.25111&layer=mapnik&marker=${tzurYitzhakCoords.lat}%2C${tzurYitzhakCoords.lng}`
-const mapLink = `https://www.google.com/maps/search/?api=1&query=${tzurYitzhakCoords.lat},${tzurYitzhakCoords.lng}`
+const mapEmbedSrc = `https://maps.google.com/maps?q=${encodedAddress}&hl=iw&z=16&output=embed`
+const mapLink = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`
 
 const reasons = [
   {
@@ -72,13 +70,13 @@ const WhyMeSection = () => (
             <div>
               <p className="text-xl font-bold text-slate-900">קליניקה פרטית בצור יצחק</p>
               <p className="mt-2 text-base leading-relaxed text-slate-600">
-                בקרבת כפר סבא, כוכב יאיר והסביבה
+                נחל ערוגות 12, צור יצחק — בקרבת כפר סבא, כוכב יאיר והסביבה
               </p>
             </div>
           </div>
           <div className="relative mt-6 overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-sm">
             <iframe
-              title="מפה לדוגמה של צור יצחק"
+              title="מפה — נחל ערוגות 12, צור יצחק"
               src={mapEmbedSrc}
               className="h-[260px] w-full border-0"
               loading="lazy"
