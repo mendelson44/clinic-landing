@@ -1,4 +1,5 @@
 import ClosingSection from '../components/landing/ClosingSection'
+import FaqSection from '../components/landing/FaqSection'
 import HeroSection from '../components/landing/HeroSection'
 import MethodSection from '../components/landing/MethodSection'
 import ProcessSection from '../components/landing/ProcessSection'
@@ -26,6 +27,7 @@ const Home = () => {
       <ProcessSection video="/videos/process-treatment.mp4" />
       <WhyMeSection />
       <ClosingSection />
+      <FaqSection />
       <SiteFooter />
       <StickyWhatsAppButton />
     </main>

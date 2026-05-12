@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Activity, BriefcaseMedical, MapPin, Search, Target } from 'lucide-react'
 
-const clinicAddress = 'נחל ערוגות 12, צור יצחק'
+const clinicAddress = 'בזלת 14, צור יגאל'
 const encodedAddress = encodeURIComponent(clinicAddress)
 
 const mapEmbedSrc = `https://maps.google.com/maps?q=${encodedAddress}&hl=iw&z=16&output=embed`
@@ -68,15 +68,15 @@ const WhyMeSection = () => (
               <MapPin className="h-6 w-6" aria-hidden />
             </div>
             <div>
-              <p className="text-xl font-bold text-slate-900">קליניקה פרטית בצור יצחק</p>
+              <p className="text-xl font-bold text-slate-900">קליניקה פרטית בצור יגאל</p>
               <p className="mt-2 text-base leading-relaxed text-slate-600">
-                נחל ערוגות 12, צור יצחק — בקרבת כפר סבא, כוכב יאיר והסביבה
+                בזלת 14, צור יגאל — בקרבת כפר סבא, הוד השרון והסביבה
               </p>
             </div>
           </div>
           <div className="relative mt-6 overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-sm">
             <iframe
-              title="מפה — נחל ערוגות 12, צור יצחק"
+              title="מפה — בזלת 14, צור יגאל"
               src={mapEmbedSrc}
               className="h-[260px] w-full border-0"
               loading="lazy"

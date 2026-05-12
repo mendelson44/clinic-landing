@@ -26,7 +26,7 @@ const SiteHeader = () => {
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-center px-4 sm:h-16">
         <p className="text-center font-sans text-base font-semibold tracking-wide text-slate-800 sm:text-lg">
           <span className="bg-gradient-to-l from-emerald-700 to-emerald-600 bg-clip-text text-transparent">
-            גיא נימני
+            Guy Nimni
           </span>
           <span className="mx-2 text-slate-300" aria-hidden>
             |

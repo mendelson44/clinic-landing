@@ -59,9 +59,8 @@ const MethodSection = () => {
             מגיב.
           </p>
           <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            לאחר מכן מתבצע טיפול ממוקד, שמשלב בעיקר כוסות רוח וטווינא, לצד טכניקות נוספות כמו
-            הקזות דם ומניפולציות ממוקדות — בהתאם למקור העומס, לאזור הכאב ולתגובה של הגוף בזמן
-            הטיפול
+            לאחר מכן מתבצע טיפול ממוקד, שמשלב בעיקר כוסות רוח וטווינא, לצד טכניקות נוספות מהרפואה הסינית
+            בהתאם למקור העומס, לאזור הכאב ולתגובה של הגוף בזמן הטיפול.
           </p>
 
           <div className="rounded-2xl border border-emerald-200/60 bg-gradient-to-bl from-emerald-50/80 to-transparent p-6 sm:p-8">

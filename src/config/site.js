@@ -13,9 +13,9 @@ export function getWhatsAppHref() {
 }
 
 export const site = {
-  title: 'גיא נימני | שיקום הגוף',
+  title: 'Guy Nimni | שיקום הגוף',
   description:
-    'טיפול ממוקד בכאבי גב, צוואר וסיאטיקה — שילוב כוסות רוח וטכניקות נוספות. קליניקה בצור יצחק.',
+    'טיפול ממוקד בכאבי גב, צוואר וסיאטיקה — שילוב כוסות רוח וטכניקות נוספות. קליניקה בצור יגאל.',
   /** Set in production, e.g. https://www.example.co.il */
   url: import.meta.env.VITE_SITE_URL?.replace(/\/$/, '') || '',
   businessName: 'גיא נימני — שיקום הגוף',

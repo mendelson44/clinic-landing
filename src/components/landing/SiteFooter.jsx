@@ -15,6 +15,9 @@ const SiteFooter = () => {
           <a href="#why-me" className="underline-offset-2 hover:text-slate-900 hover:underline">
             למה אני
           </a>
+          <a href="#faq" className="underline-offset-2 hover:text-slate-900 hover:underline">
+            שאלות נפוצות
+          </a>
           <a
             href={whatsappHref}
             target="_blank"
