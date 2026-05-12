@@ -26,12 +26,12 @@ const SiteHeader = () => {
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-center px-4 sm:h-16">
         <p className="text-center font-sans text-base font-semibold tracking-wide text-slate-800 sm:text-lg">
           <span className="bg-gradient-to-l from-emerald-700 to-emerald-600 bg-clip-text text-transparent">
-            Guy Nimni
+            שיקום הגוף
           </span>
           <span className="mx-2 text-slate-300" aria-hidden>
             |
           </span>
-          <span className="font-medium text-slate-600">שיקום הגוף</span>
+          <span className="font-medium text-slate-600">Guy Nimni</span>
         </p>
       </div>
     </motion.header>
